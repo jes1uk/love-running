@@ -1,3 +1,14 @@
+/* Asterisk wildcard selector to override default styles added by the browser.
+ Note that general CSS rules come before more specific ones. */
+* {
+    padding: 0;
+    margin: 0;
+    /* The box-sizing: border-box is set so that when the height or width is
+     applied to an element, it will be applied to the entire element,
+     INCLUDING padding and the border. whereas box-sizing: content-box (the default)
+     only applies strictly to the content box inside */
+    box-sizing: border-box;
+}
 /* Header */
 header {
     background-color: lightcoral;
