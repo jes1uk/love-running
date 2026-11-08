@@ -30,7 +30,35 @@ body {
 
 /* Header */
 header {
-    background-color: lightcoral;
+    background-color: #ffffff;
+    /* top and bottom (vertical) padding zero,
+    and left/right (horizontal) padding 1rem
+    (1 root em unit, which typically equals the
+    root font size of the document, usually 16px) */
+    padding: 0 1rem;
+    position: fixed;
+    /* A 99 z-index value is used to ensure
+    it's layered on top of any other elements
+    that might have a z-index later */
+    z-index: 99;
+    /* the width of the header element reverted
+    to content width when we made the position: fixed;
+    so need to set width: 100%; to make sure it fills
+    the width of the screen again */
+    width: 100%;
+    /* 1st mandatory value: horizontal offset
+    (-ve values offset this to left,
+    +ve values offset to right of element), but not
+    needed here as header full width anyway
+    therefore value set to zero.
+    2nd mandatory value: vertical offset
+    (+ve value will display the shadow below
+    the element and -ve value above).
+    3rd value sets the blur, which is
+    essentially how soft or hard the shadow will look.
+    4th is a color value so we don't default to pure black.
+     */
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 h1 {
