@@ -61,8 +61,18 @@ header {
     box-shadow: 0 2px 2px #3a3a3a;
 }
 
+header a {
+    text-decoration: none;
+    /* inherit the text colour from the body,
+    so default link colour being applied by browser */
+    color: inherit;
+}
+
 h1 {
     font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* Main content */
