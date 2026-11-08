@@ -9,6 +9,16 @@
      only applies strictly to the content box inside */
     box-sizing: border-box;
 }
+
+/* General styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+}
+
 /* Header */
 header {
     background-color: lightcoral;
@@ -17,6 +27,19 @@ header {
 /* Main content */
 main {
     background-color: lightblue;
+    /* FlexBox shortcut for flex-grow
+    (1 means if there is extra empty space on screen,
+    take an equal share of it with the other elements
+    and expand to fill it);
+    flex-shrink (0 means that the element should
+    NOT compress below its content's natural size);
+    flex-basis (auto means that the element's natural
+    content size (or its height/width property) is
+    looked at to figure out how big it should start
+    before flexbox starts adjusting it) */
+    /* Overall, makes main element take up any
+    surplus space to push footer down the bottom of page */
+    flex: 1 0 auto;
 }
 
 /* Footer */
