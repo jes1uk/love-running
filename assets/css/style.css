@@ -36,6 +36,11 @@ header {
     (1 root em unit, which typically equals the
     root font size of the document, usually 16px) */
     padding: 0 1rem;
+    /* position: fixed; removes an element from the normal doc flow
+    & positions it relative to the viewport (i.e. browswer window).
+    It does not scroll with page and remains locked in its exact coordinates.
+    As it's taken out of normal doc flow,
+    it collapses to the with of its content unless explicitly given a width like 100% */
     position: fixed;
     /* A 99 z-index value is used to ensure
     it's layered on top of any other elements
@@ -46,7 +51,7 @@ header {
     so need to set width: 100%; to make sure it fills
     the width of the screen again */
     width: 100%;
-    /* 1st mandatory value: horizontal offset
+    /* box-shadow: 1st mandatory value: horizontal offset
     (-ve values offset this to left,
     +ve values offset to right of element), but not
     needed here as header full width anyway
@@ -87,6 +92,23 @@ h1 {
 
 .active {
     border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toggle */
+nav {
+    /* Absolute positioning takes an element
+    outside the normal flow of the page structure.
+    It is positioned relative to the nearest
+    positioned ancestor, which in this case is the header */
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0%;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    /* the nav bar elements are set to hidden
+    until the user clicks to open them*/
+    display: none;
 }
 
 /* Main content */
