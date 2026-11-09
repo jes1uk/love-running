@@ -175,6 +175,13 @@ main {
     /* Overall, makes main element take up any
     surplus space to push footer down the bottom of page */
     flex: 1 0 auto;
+    /* Main content on the web page is currently not visible
+    because we set our header's position to fixed, which
+    took it out of the normal flow of elements on the page and
+    it therefore covered the top of the main elements/content.
+    We add margin-top: 47px; to our main element to push the
+    content down the page so we can see it underneath the nav bar*/
+    margin-top: 47px;
 }
 
 /* Footer */
