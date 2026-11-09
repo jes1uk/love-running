@@ -188,3 +188,41 @@ main {
 footer {
     background-color: orange;
 }
+/* CSS construct known as a Media query: tablets and larger (768px and up)
+Media queries contain styles that are only called when certain criteria
+are reached. A commonly used breakpoint between a mobile layout and
+a tablet layout is for screens with a minimum width of 768 pixels
+*/
+/* Since we want these styles to OVERRIDE the ones we set for mobile screens
+when the screen reaches the breakpoint we set, media queries should ALWAYS go
+at the bottom of our CSS file with the smallest screen size first
+and the largest last */
+@media screen and (min-width: 768px) {
+    nav {
+        /* Ensures that the nav bar is always displayed */
+        display: block;
+        /* Moves the navbar back into the header and
+        hide the box-shadow and
+        change the width to fit the content, so it no longer
+        takes up all of the space in the header
+        which allows the flex styles to push it to the RHS  */
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        /* Padding added to right so menu items don't stick
+        to the edge of the screen */
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+}
