@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
-        <!-- Header: contains introductory content, headings, or navigation links-->
+        <!-- Header: contains introductory content, headings, or navigation links -->
         <header>
             <a href="index.html">
                 <!-- can use Emmet here...just type
@@ -60,6 +60,32 @@
         <main>Main Content</main>
 
         <!-- Footer: contains information like copyright, contact information and site and/or social media links -->
-        <footer>Footer</footer>
+        <footer>
+            <ul>
+                <li>
+                    <!-- rel="noopener" is used as we are linking to an external website
+                    using target="blank" and it protects our site from attack.
+                    It specifically prevents a security exploit called 'Reverse Tabnabbing'.
+                    The aria-label attribute is used for accessibility, as we will be using a
+                    facebook icon here instead of text -->
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Visit our facebook page (opens in a new tab)"
+                        ><i class="fa-brands fa-facebook"></i
+                    ></a>
+                </li>
+            </ul>
+        </footer>
+        <!-- It's good practice to place JavaScript scripts at the bottom of the HTML file
+         instead of in the head of the HTML file, to speed up the loading time of websites by allowing
+         the browser to focus on building the visible HTML page BEFORE adding in the JavaScript files.
+         To place 'Font Awesome Kit' icons in the html body use
+         <i class="fa-solid fa-thumbs-up"></i> -->
+        <script
+            src="https://kit.fontawesome.com/ee401ddebf.js"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
