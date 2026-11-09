@@ -185,9 +185,23 @@ main {
 }
 
 /* Footer */
-footer {
-    background-color: orange;
+#social-networks {
+    /* The icons are basically fonts
+    (from https://fontawesome.com)
+    so we can use text-align: center; */
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
 /* CSS construct known as a Media query: tablets and larger (768px and up)
 Media queries contain styles that are only called when certain criteria
 are reached. A commonly used breakpoint between a mobile layout and
