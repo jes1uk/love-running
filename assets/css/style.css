@@ -64,6 +64,19 @@ header {
     4th is a color value so we don't default to pure black.
      */
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    /* FlexBox: justify-content: space-between; distributes all the items evenly
+    across the entire width of the container - 1st & last item pushed to
+    LHS & RHS edges respectively AND remaining space in the container
+    is divided evenly and placed BETWEEN the items*/
+    justify-content: space-between;
+    /* FlexBox: if have items of different font sizes, padding or heights
+    next to each other (e.g. small checkbox next to larger logo text)
+    standard centering or top-aligning can make the text look unevenly
+    stepped. Baseline alignment looks at the bottom edge of the letters themselves
+    (the line they "sit" on, excluding descenders like the tail on a lowercase 'g')
+    and forces them to match up perfectly */
+    align-items: baseline;
 }
 
 header a {
@@ -109,6 +122,41 @@ nav {
     /* the nav bar elements are set to hidden
     until the user clicks to open them*/
     display: none;
+    /* To stop the nav menu completely covering the rest of the header,
+    top: 100%; used. This tells the navigation element that the top
+    of the element should start at the bottom of its parent.
+    0% would represent the top of the parent
+    and 100% represents the bottom of it. */
+    top: 100%;
+}
+
+/* Nav toggle 
+This targets the hidden checkbox
+input element (using its ID nav-toggle).
+:checked: This is a pseudo-class that only
+applies when that checkbox is in a checked state
+(i.e. when the user has clicked/tapped the label to tick the box).
+~ (The General Sibling Combinator): tells the browser to look for
+an element that shares the same parent container AND
+comes after the first element. The <nav> in HTML sits right after
+the checkbox inside the header, making it an adjoining sibling.
+nav: This targets the <nav> element itself.
+The moment the checkbox is checked, the browser switches the
+navigation bar's display property to block, making it instantly
+appear on the screen.
+*/
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
+/* Hide the checkbox as there's no need to display it
+as clicking the label adjacent to it also toggles the checkbox */
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
 }
 
 /* Main content */
