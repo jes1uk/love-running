@@ -239,6 +239,52 @@ main {
     color: #3a3a3a;
 }
 
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    font-size: 280%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits-physical > div,
+#benefits-mental > div {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+#circle-cover-bg {
+    background: url("../images/reasons-image.webp") no-repeat center center /
+        cover;
+    margin-bottom: 20px;
+    /* If we want to make a circular image, the div initially needs to be
+    square in shape so width is equal to height here */
+    width: 90vw;
+    height: 90vw;
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* CSS construct known as a Media query: tablets and larger (768px and up)
 Media queries contain styles that are only called when certain criteria
 are reached. A commonly used breakpoint between a mobile layout and
