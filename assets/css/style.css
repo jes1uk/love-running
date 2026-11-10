@@ -161,7 +161,6 @@ as clicking the label adjacent to it also toggles the checkbox */
 
 /* Main content */
 main {
-    background-color: lightblue;
     /* FlexBox shortcut for flex-grow
     (1 means if there is extra empty space on screen,
     take an equal share of it with the other elements
@@ -183,7 +182,24 @@ main {
     content down the page so we can see it underneath the nav bar*/
     margin-top: 47px;
 }
-
+/* Hero section */
+#hero {
+    height: 600px;
+    width: 100%;
+    /* background is a shorthand property used to set
+    multiple background-related properties
+    center (1st instance) sets the horizontal position
+    of background image, centering it horizontally within
+    element. center (2nd instance) sets the vertical position
+    of background image, centering it vertically within the element
+    /cover — Sets the background size.
+    The forward slash (/) is required to separate position values
+    from size values. cover scales the image to be as large as possible
+    so that the background area is completely covered, preserving
+    the image's aspect ratio (meaning some parts of the image
+    may be cropped if the container's proportions don't match the image). */
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
+}
 /* Footer */
 #social-networks {
     /* The icons are basically fonts
