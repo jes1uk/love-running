@@ -28,6 +28,15 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+h1,
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -84,13 +93,6 @@ header a {
     /* inherit the text colour from the body,
     so default link colour being applied by browser */
     color: inherit;
-}
-
-h1 {
-    font-family: "Oswald", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
 }
 
 #menu {
@@ -199,7 +201,26 @@ main {
     the image's aspect ratio (meaning some parts of the image
     may be cropped if the container's proportions don't match the image). */
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 }
+
+#cover-text {
+    /* final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(241, 109, 107, 0.7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2,
+#cover-text > h3 {
+    color: #ffffff;
+}
+
 /* Footer */
 #social-networks {
     /* The icons are basically fonts
@@ -265,6 +286,11 @@ and the largest last */
     main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
+    }
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
     }
 }
 /* Large devices (laptops and desktops, 992px and up) */
