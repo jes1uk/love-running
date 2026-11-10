@@ -225,6 +225,22 @@ main {
     color: #ffffff;
 }
 
+/* Gallery page */
+#photos img {
+    width: 100%;
+    /* To ensure alt text readable if photos fail to load
+    (as line-height: 0; in #photos below) */
+    line-height: 1em;
+}
+
+#photos {
+    /* By default, the images in here are inline elements,
+    which are treated like text. Text has an automatic line height
+    to vertically space out the lines, which is causing
+    white space between the images therefor line-height changed to zero */
+    line-height: 0;
+}
+
 /* Footer */
 #social-networks {
     /* The icons are basically fonts
